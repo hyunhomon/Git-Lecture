@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page1</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tooltip Example</title>
+<style>
+body {
+  /* 배경 이미지 설정 */
+  background-image: url('https://i.namu.wiki/i/OCiUN0jGjz3ms1_9Vdmn-TtHrjT8eCtoEmnxivG-_ZatcNBctV29uJp1Aqmnz6ngfoQK0qjohgk65PGbuD_ij8iaN9meXDYZWrjaADPty7xnVb9wlcJ8xgkym_w4qdyOoJeJQVSYbV9c3Z1sVxqFCQ.webp');
+  /* 이미지를 반복하지 않고 화면에 꽉 채우도록 설정 */
+  background-size: cover;
+  /* 배경 이미지를 가운데 정렬 */
+  background-position: center;
+  /* 배경 색상을 설정 (이미지 로딩 중이거나 이미지가 로드되지 않았을 때 보일 색상) */
+  background-color: #f8f9fa;
+  /* 배경 이미지 고정 여부 설정 */
+  background-attachment: fixed;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+li {
+  margin-bottom: 40px; /* 원하는 간격으로 조절 가능 */
+}
+</style>
 </head>
 <body>
-    <h1>page 1</h1>
+    <h1>코끼리의 이것저것 10까지</h1>
+    <hr>
+<ol>
+    <li>
+        <div class="tooltip">사실 코끼리고기는 맛있다
+        <span class="tooltiptext">보호종이라 안먹는다고 한다</span>
+        </div>
+    </li>
+    <li>
+        <div class="tooltip">코끼리는 하늘을 난다
+        <span class="tooltiptext">인도 설화다 믿지마라</span>
+        </div>
+    </li>
+    <li>
+        <div class="tooltip">코가 길다
+        <span class="tooltiptext">다 아는 사실</span>
+        </div>
+    </li>
+    <li>
+        <div class="tooltip">도마뱀을 잡은 짤이 유명하다.(엑스칼리버를 뽑았다고 유명해짐)
+        <span class="tooltiptext">지금 배경사진이다.</span>
+        </div>
+    </li>
+    <li>
+        <div class="tooltip">나무위키를 뒤져도 더 쓸게 없다
+        <span class="tooltiptext">큰일났다</span>
+        </div>
+    </li>
+</ol>
+
 </body>
 </html>
